@@ -5,7 +5,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { calcStore } from "@/stores/calcStore";
+
+const store = calcStore();
+</script>
 
 <style lang="scss" scoped>
 .screen {

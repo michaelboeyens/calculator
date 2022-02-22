@@ -1,11 +1,25 @@
 export type CalcStoreState = {
   history: History[];
-  firstInput: number | null;
-  secondInput: number | null;
+  firstInput: string | null;
+  secondInput: string | null;
   operation: string | null;
+  buttons: Button[];
 };
 
 interface History {
   equation: string;
   result: string;
 }
+
+interface Button {
+  content: string;
+  property: ButtonProperty;
+  value: number | string | null;
+}
+
+type ButtonProperty =
+  | "numb"
+  | "symbol"
+  | "mathSymbol"
+  | "calculate"
+  | "singleMathSymbol";

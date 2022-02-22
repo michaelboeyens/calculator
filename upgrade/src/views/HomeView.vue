@@ -2,7 +2,11 @@
   <main class="calc">
     <CalcScreen class="calc__screen" />
     <div class="calc__container">
-      <CustomButton />
+      <div v-for="(item, index) in buttonGrid" :key="'gridrow ' + (index + 1)">
+        <CustomButton v-for="subitem in item" :key="subitem">
+          {{ subitem }}
+        </CustomButton>
+      </div>
     </div>
     <CustomAside class="calc__history" />
   </main>
@@ -12,6 +16,15 @@
 import CalcScreen from "@/components/CalcScreen.vue";
 import CustomButton from "@/components/CustomButton.vue";
 import CustomAside from "@/components/CustomAside.vue";
+
+const buttonGrid = [
+  ["%", "CE", "C", "DEL"],
+  ["1/x", "x²", "√", "÷"],
+  ["7", "8", "9", "x"],
+  ["4", "5", "6", "-"],
+  ["1", "2", "3", "+"],
+  ["±", "0", ",", "="],
+];
 </script>
 
 <style lang="scss" scoped>
