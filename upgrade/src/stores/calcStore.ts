@@ -8,6 +8,7 @@ export const calcStore = defineStore("calcStore", {
       firstInput: null,
       secondInput: null,
       operation: null,
+      result: "0",
       buttons: [
         { content: "1", property: "numb", value: 1 },
         { content: "2", property: "numb", value: 2 },
@@ -38,5 +39,9 @@ export const calcStore = defineStore("calcStore", {
   },
   getters: {
     historyLength: (state) => state.history.length,
+    topDisp: (state) =>
+      `${state.firstInput ?? ""} ${state.operation ?? ""} ${
+        state.secondInput ?? ""
+      }`,
   },
 });

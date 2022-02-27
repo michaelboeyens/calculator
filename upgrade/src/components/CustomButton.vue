@@ -11,6 +11,7 @@
   font-size: 1.5em;
   border: none;
   cursor: pointer;
+  width: 100%;
   &:hover {
     background-color: darkgray;
     color: white;

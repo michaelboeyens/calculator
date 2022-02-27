@@ -4,6 +4,7 @@ export type CalcStoreState = {
   secondInput: string | null;
   operation: string | null;
   buttons: Button[];
+  result: string | null;
 };
 
 interface History {

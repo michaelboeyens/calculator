@@ -1,7 +1,7 @@
 <template>
   <div class="screen">
-    <p>topDisp</p>
-    <h1>mainDisp</h1>
+    <p>{{ store.topDisp }}</p>
+    <h1>{{ store.result }}</h1>
   </div>
 </template>
 
